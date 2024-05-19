@@ -6,13 +6,13 @@ import styles from '../../page.module.scss';
 export default function Page() {
     
      return (
-        <><div>
+        <><div style={{color: 'white', fontSize: '40px'}}>
     
   
-            Congrs. You are logged in!
+            Секретный канал для авторизованных пользователей. Можно загружать картинки
             
         </div>
-        <Link href='/'><button style={{color: 'blue'}}>Back</button> </Link></>
+        <Link href='/'><button style={{color: 'blue', position: 'absolute', fontSize: '30px', top: '400px', left: '300px'}}>Назад</button> </Link></>
     )
 
 }

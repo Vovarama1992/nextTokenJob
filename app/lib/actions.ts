@@ -29,19 +29,25 @@ export async function addLogin(formData: FormData) {
 }
 
 export async function checkLogin(formData: FormData) {
-    
+  let res;
+    try {
       const email = formData.get('email') as string;
       const password = formData.get('password') as string;
      
       
      
       
-      const res = await signInAttempt(email, password);
+      res = await signInAttempt(email, password);
       console.log('res: ' + res);
-      if (res) {
-        redirect('/loggedIn');
-      } else {
-        redirect(`/?verdict=true`);
-      }
-    
+      
+    } catch (error) {
+      console.error('Error during login check:', error);
+      // Optional: Add user-friendly error handling here
+       // Redirect to a generic error page or handle the error appropriately
+    }
+    if (res) {
+      redirect('/loggedIn');
+    } else {
+      redirect(`/?verdict=true`);
+    }
   }
