@@ -29,7 +29,7 @@ export async function addLogin(formData: FormData) {
 }
 
 export async function checkLogin(formData: FormData) {
-  let res;
+  let res = 1;
     try {
       const email = formData.get('email') as string;
       const password = formData.get('password') as string;
