@@ -1,4 +1,5 @@
 'use server';
+
 import { signUpAttempt, signInAttempt} from '../lib/data';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
@@ -28,23 +29,19 @@ export async function addLogin(formData: FormData) {
 }
 
 export async function checkLogin(formData: FormData) {
-    try {
+    
       const email = formData.get('email') as string;
       const password = formData.get('password') as string;
-      const check = formData.get('checkbox') as string;
+     
       
-      console.log("check: " + check);
-  
+     
+      
       const res = await signInAttempt(email, password);
-  
+      console.log('res: ' + res);
       if (res) {
         redirect('/loggedIn');
       } else {
         redirect(`/?verdict=true`);
       }
-    } catch (error) {
-      console.error('Error during login check:', error);
-      // Optional: Add user-friendly error handling here
-      redirect('/error'); // Redirect to a generic error page or handle the error appropriately
-    }
+    
   }

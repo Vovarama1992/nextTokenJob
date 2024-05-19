@@ -39,6 +39,7 @@ export async function signInAttempt(email: string, password: string) {
 
     // Если количество строк с данным email и паролем больше 0, значит комбинация существует
     const count = result.rows[0].count;
+    console.log('count: ' + count);
     return count > 0;
   } catch (error) {
     console.error('Ошибка при проверке учетных данных:', error);
