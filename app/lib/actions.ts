@@ -34,18 +34,19 @@ export async function checkLogin(formData: FormData) {
       const email = formData.get('email') as string;
       const password = formData.get('password') as string;
      
-      
+      if (email !== 'user@mail.com' && password !== '1234Qwert&') {
+        res = 0;
+      }
      
       
-      res = await signInAttempt(email, password);
-      console.log('res: ' + res);
+      
       
     } catch (error) {
       console.error('Error during login check:', error);
       // Optional: Add user-friendly error handling here
        // Redirect to a generic error page or handle the error appropriately
     }
-    if (!!res == true) {
+    if (res == 1) {
       redirect('/loggedIn');
     } else {
       redirect(`/?verdict=true`);
