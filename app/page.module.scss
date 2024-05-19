@@ -1,0 +1,182 @@
+
+
+.mainBody {
+  background: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+}
+.loginWrapper {
+      width: 30%;
+      height: 30%;
+      margin-left: 15%;
+      margin-top: 15%;
+      background: green;
+}
+
+.container {
+  display: flex;
+  
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 10%;
+  height: 100vh;
+  background-image: url('./images/mountains.jpg');
+  background-size: cover; 
+  background-position: center;
+
+  
+}
+.wrongLog {
+  position: absolute;
+  left: auto;
+  top: 105px;
+  border: black;
+  font-size: 15px;
+  color: rgb(61, 61, 140);
+  
+  
+}
+
+.secretInfo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  
+}
+.columnMenu {
+  display: flex;
+  
+  flex-direction: column;
+  width: 33%;
+  height: 80%;
+  margin: 10% 0 5%;
+  
+  
+  
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.inputWrapper {
+  width: 100%;
+  height: 35%;
+  padding: 2%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+   
+}
+.inputInput {
+  width: 99%;
+  height: 99%;
+  border: none;
+  outline: none; 
+  padding-left: 10px;
+}
+.hidden {
+  margin-top: 15px;
+}
+
+.buttonBlock {
+  display: inline-block;
+  width: 95%;
+  
+  margin: 15px auto;
+  height: 30px;
+  border-radius: 20px;
+  background: rgb(14, 106, 145);
+}
+.button {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  
+}
+
+.login {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  flex-direction: column;
+  padding-bottom: 15px;
+  justify-content: center;
+}
+.backUp {
+   
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 58%;
+  padding-top: 25px;
+  height: 80%;
+ 
+}
+
+.menu {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 90%;
+  padding: 1% 10%;
+}
+.signer {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 10%;
+}
+.welcome {
+  width: 100%;
+  height: 20%;
+  margin: 20vh 0;
+  background: white;
+}
+.gold {
+  color: rgb(175, 175, 46);
+}
+.another {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    height: 90vh;
+    margin: 5vh 0; 
+  }
+  .menu {
+    height: 90%;
+    
+  }
+  .button {
+    height: auto;
+  }
+  .columnMenu {
+    width: 48%;
+  }
+  
+}
+
+
