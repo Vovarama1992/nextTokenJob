@@ -45,7 +45,7 @@ export async function checkLogin(formData: FormData) {
       // Optional: Add user-friendly error handling here
        // Redirect to a generic error page or handle the error appropriately
     }
-    if (res) {
+    if (!!res == true) {
       redirect('/loggedIn');
     } else {
       redirect(`/?verdict=true`);
